@@ -1,6 +1,7 @@
 const userRepository = require("../repositories/repository");
 
 class UserService {
+
     async getUsers() {
         return await userRepository.getAll();
     }
@@ -23,6 +24,7 @@ class UserService {
     async deleteUser(id) {
         return await userRepository.delete(id);
     }
+    
 }
 
 module.exports = new UserService();

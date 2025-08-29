@@ -1,6 +1,7 @@
 const db = require("../config/db");
 
 class UserRepository {
+
     getAll() {
         return new Promise((resolve, reject) => {
             db.all("SELECT * FROM users", [], (err, rows) => {
